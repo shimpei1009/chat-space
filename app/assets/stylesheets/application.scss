@@ -33,17 +33,18 @@
         width: 60px;
         line-height:20px;
         display: flex;
+        justify-content: flex-end;
         &__new{
-          margin-left: auto;
           margin-right: 5px;
         }
         &__edit{
-          margin: 0 0 0 0;
+          
         }
         a{
           color:white;
           font-size: 14px;
           text-decoration: none;
+          
         }
       }
     }
