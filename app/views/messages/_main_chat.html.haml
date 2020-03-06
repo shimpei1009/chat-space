@@ -1,0 +1,26 @@
+
+.chat-main
+  .chat-main__group-info
+    .chat-main__group-info__left_box
+      .chat-main__group-info__left_box__current-group  dd
+      .chat-main__group-info__left_box__groop-member Member
+    .chat-main__group-info__right_box 
+      = link_to "#", class: "edit__btn" do
+        Edit
+  .chat-main__chat-main
+    .chat-main__chat-main__message
+      .chat-main__chat-main__message__block
+        .chat-main__chat-main__message__block__current-user iii
+        .chat-main__chat-main__message__block__current-user-date 2020/3/5
+      .chat-main__chat-main__message__current-text aaa
+    .chat-main__chat-main__message
+  .chat-main__message-form
+    .chat-main__message-form__type-area
+      .chat-main__message-form__type-area__message
+        %input{type: "text", class: "chat-main__message-form__type-area__message__text", placeholder: "type a message"} 
+          %label{class: "chat-main__message-form___type-area__message__text__icon"}
+            = icon('fas', 'image')
+            %input{type: "file", class: "chat-main__message-form__type-area__message__text__icon__image"}
+      .chat-main__message-form__type-area__send
+        = link_to "#", class: "edit__btn" do
+          Send
