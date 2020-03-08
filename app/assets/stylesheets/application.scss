@@ -5,6 +5,7 @@
 @import "font-awesome";
 @import "modules/user";
 @import "modules/flash";
+@import "modules/group";
 
 
 .wrapper {
@@ -37,10 +38,9 @@
         display: flex;
         justify-content: flex-end;
         &__new{
-          margin-right: 5px;
         }
         &__edit{
-          
+          margin-left: 5px;
         }
         a{
           color:white;
@@ -54,7 +54,7 @@
     height: calc(100vh - 100px);
     background-color: #2f3e51;
     padding:20px 20px 0px 20px;
-   &__group{
+    .group{
      margin-bottom: 40px;
      &__name{
        color: #ffffff;
@@ -64,6 +64,11 @@
       &__message{
        color: #ffffff;
        font-size: 11px;
+      }
+      a{
+        text-decoration: none;
+        color: white;
+        display: block;
       }
     }
   }
