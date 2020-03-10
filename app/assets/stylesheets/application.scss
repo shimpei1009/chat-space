@@ -12,20 +12,15 @@
   display: flex;
   height: 100vh;
 }
-
 .side-bar {
-  width: 300px;
   background-color: #253141;
   &__user-name{
     height: 100px;
-    width: 300px;
     background-color: #253141;
     display: flex;
     align-items: center;
     &__top-items{
       color: #ffffff;
-      font-weight: bold;
-      font-size: 16px;
       height: 20px;
       width: 260px;
       margin: 0 20px;
@@ -33,10 +28,10 @@
       justify-content: space-between;
       &__name{
         line-height:20px;
+        font-weight: bold;
       }
       &__icons{
         display: flex;
-        justify-content: flex-end;
         &__new{
         }
         &__edit{
@@ -45,7 +40,6 @@
         a{
           color:white;
           font-size: 14px;
-          text-decoration: none;
         }
       }
     }
@@ -90,9 +84,13 @@
         padding-top: 35px;
         padding-bottom: 15px;
       }
-      &__groop-member{
+      &__group-member{
         color: #999999;
         font-size: 12px;
+        display: flex;
+        li{
+          display: contents;
+        }
       }
     }
     &__right_box{
@@ -116,6 +114,7 @@
     background-color: #fafafa;
     padding-top: 35px;
     padding-left: 40px;
+    overflow: scroll;
     &__message{
       padding-bottom: 46px;
       &__block{
@@ -125,6 +124,7 @@
         &__current-user{
           color: #333333;
           font-size: 16px;
+          font-weight: bold;
         }
         &__current-user-date{
           color: #999999;
@@ -140,48 +140,47 @@
     }
   }
   &__message-form{
-    height: 90px;
     background-color: #d2d2d2;
     &__type-area{
       padding: 20px 40px;
-      display: flex;
       &__message{
-        background-color: white;
-        height: 50px;
-        width: 100%;
-        line-height: 50px;
-        padding: 0 10px;
-        display: flex;
-        position: relative;
         &__text{
-          border: 0;
           width: 100%;
+          border: 0;
+          padding: 0 10px;
+        }
+        form{
           display: flex;
-          &__icon{
-            position: absolute;
-            &__image{
-              display: none;
+          position: relative;
+          .form__mask{
+            &__icon{
+              position: absolute;
+              top: 15px;
+              right: 130px;
+              cursor: pointer;
+              &__image{
+                display: none;
+              }
+            }
+            &__send{
+              width: 100px;
+              height: 50px;
+              color: white;
+              background-color: #38aef0;
+              margin-left: 15px;
+              line-height: 50px;
+              cursor: pointer;
+              a{
+                width: 100px;
+                height: 50px;
+                text-decoration: none;
+                display: block;
+                padding: 0 30px;
+              }
             }
           }
-        }
-      }
-      
-    &__send{
-      width: 100px;
-      height: 50px;
-      background-color: #38aef0;
-      margin-left: 15px;
-      line-height: 50px;
-       a{
-        width: 100px;
-        height: 50px;
-        text-decoration: none;
-        color: white;
-        display: block;
-        padding: 0 30px;
         }
       }
     }
   }
 }
-
