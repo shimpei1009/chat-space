@@ -1,11 +1,11 @@
-.chat-main__chat-main__message
-  .chat-main__chat-main__message__block
-    .chat-main__chat-main__message__block__current-user
+.chat-main__chat-home__message
+  .chat-main__chat-home__message__block
+    .chat-main__chat-home__message__block__current-user
       = message.user.name
-    .chat-main__chat-main__message__block__current-user-date
+    .chat-main__chat-home__message__block__current-user-date
       =message.created_at.strftime("%Y年%m月%d日 %H時%M分")
-  .chat-main__chat-main__message__current-text
+  .chat-main__chat-home__message__current-text
     -if message.content.present?
-      %p.chat-main__chat-main__message__current-text__content
+      %p.chat-main__chat-home__message__current-text__content
         = message.content
-    = image_tag message.image.url, class: 'chat-main__chat-main__message__current-text__image' if message.image.present?
+    = image_tag message.image.url, class: 'chat-main__chat-home__message__current-text__image' if message.image.present?
