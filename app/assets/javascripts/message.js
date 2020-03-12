@@ -1,8 +1,6 @@
 $(function(){
     var buildHTML = function (message) {
-      console.log(message)
       if (message.content && message.image) {
-        console.log(1)
         var html =`<div class="chat-main__chat-home__message" data-message-id="${message.id}">
                     <div class="chat-main__chat-home__message__block">
                       <div class="chat-main__chat-home__message__block__current-user">
@@ -20,7 +18,6 @@ $(function(){
                       </div>
                     </div>`
       } else if (message.content) {
-        console.log(2)
         var html =`<div class="chat-main__chat-home__message" data-message-id="${message.id}">
                     <div class="chat-main__chat-home__message__block">
                        <div class="chat-main__chat-home__message__block__current-user">
@@ -37,7 +34,6 @@ $(function(){
                   </div>
                 </div>`
       }else if(message.image) {
-        console.log(3)
         var html =`<div class="chat-main__chat-home__message" data-message-id="${message.id}">
                      <div class="chat-main__chat-home__message__block">
                        <div class="chat-main__chat-home__message__block__current-user">
@@ -83,7 +79,6 @@ $('#new_message').on('submit', function(e){
 
     var reloadMessages = function() {
       var last_message_id = $('.chat-main__chat-home__message:last').data("message-id");
-      console.log(last_message_id)
       $.ajax({
         url: "api/messages",
         type: 'get',
