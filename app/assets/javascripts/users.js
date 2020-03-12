@@ -42,6 +42,7 @@ $(function() {
     })
       .done(function(users) {
         $("#user-search-result").empty();
+        $('#user-search-result').find('p').remove();
 
         if (users.length !== 0) {
           users.forEach(function(user) {
@@ -58,7 +59,6 @@ $(function() {
       });
   });
   $(document).on("click", ".chat-group-user__btn--add", function() {
-    console.log
     const userName = $(this).attr("data-user-name");
     const userId = $(this).attr("data-user-id");
     $(this)
@@ -69,7 +69,7 @@ $(function() {
   });
   $(document).on("click", ".chat-group-user__btn--remove", function() {
     $(this)
-      .parent()
-      .remove();
+    .parent()
+    .remove();
   });
 });
