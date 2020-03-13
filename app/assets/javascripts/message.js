@@ -81,7 +81,7 @@ $('#new_message').on('submit', function(e){
       var last_message_id = $('.chat-main__chat-home__message:last').data("message-id");
       $.ajax({
         url: "api/messages",
-        type: 'get',
+        type: 'GET',
         dataType: 'json',
         data: {id: last_message_id}
       })
